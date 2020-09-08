@@ -1,5 +1,5 @@
 
-import urllib2
+from urllib.request import urlopen
 import tqdm
 import json
 
@@ -29,7 +29,7 @@ root = "."
 for y in tqdm.tqdm(years):
     for m in months:
         request_string = monthly % (y, m, api_key)
-        response = urllib2.urlopen(request_string)
+        response = urlopen(request_string)
         content = response.read()
         if content:
             articles = convert(json.loads(content))
