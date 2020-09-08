@@ -4,6 +4,6 @@ bs4
 joblib==0.12.2
 nltk==3.2.3
 tqdm==4.19.5
-goose==1.0.25
+goose
 urlparse
 unidecode
